@@ -20,7 +20,7 @@ contact author at situkangsayur[at]gmail[dot]com.
 
 
 The project using QT Framework for GUI and OpenCV for Computer Vision library.
-The methods are using skin color filter, convex hull, convexity defect and pyramidal lucas kanade for optical flow.
+The methods that used in this project: skin color filter, convex hull, convexity defect and pyramidal lucas kanade for optical flow.
 Video demo : https://www.youtube.com/watch?v=jup99fg9ioQ
 
 news :
