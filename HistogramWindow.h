@@ -40,19 +40,14 @@ class HistogramWindow : public QWidget
         QHistogramWidget *widgetHistogram;
 
         ConHistogram *histogram;
-      //  QPushButton  buttonStart;
-       // HandTracking *tracking;
-      //  ConContour *contour;
+
         IplImage *img;
-        //IplImage *src;
 
         int set;
         
     public:
 
         HistogramWindow(QWidget *parent=0);
-
-       // void setQWidget(QWidget *parent);
 
         void setSet(int s);
         void setImage(IplImage *image);

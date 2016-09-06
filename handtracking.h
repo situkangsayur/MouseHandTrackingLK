@@ -33,11 +33,6 @@ using namespace std;
 
 using namespace cv;
 
-//const
-
-
-//=================
-
 class HandTracking {
 
 private:

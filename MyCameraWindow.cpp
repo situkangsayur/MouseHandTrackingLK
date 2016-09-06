@@ -30,8 +30,6 @@ MyCameraWindow::MyCameraWindow( QWidget *parent) : QWidget(parent) {
 
     }
 
-    //	cout << "set capture...\n";
-
     if (!camera) {
             cout << "Could not initialize capturing...\n";
             return;
@@ -55,7 +53,7 @@ MyCameraWindow::MyCameraWindow( QWidget *parent) : QWidget(parent) {
     resize(640, 480);
 
     startTimer(100);  // 0.1-second timer
-   // QObject::connect(buttonStart, SIGNAL(clicked()), SIstemView, SLOT(on_buttonStart_clicked()));
+
  }
 
 void MyCameraWindow::timerEvent(QTimerEvent*) {
@@ -84,7 +82,6 @@ void MyCameraWindow::timerEvent(QTimerEvent*) {
 
         image=cont->getCurrentFrame();
 
-      // cvCopy(image,hist);
         model->setImage(image);
 
         cvCvtColor(cont->getSkin(),black,CV_GRAY2BGR);
@@ -121,8 +118,6 @@ void MyCameraWindow::timerEvent(QTimerEvent*) {
 
 }
 
-//methode accessor
-
 void MyCameraWindow::setModel(SistemModel *model){
     this->model = model;
 }
@@ -151,9 +146,4 @@ int MyCameraWindow::getHistogram(){
 int MyCameraWindow::getContour(){
     return countur;
 }
-
-//SLOT :
-
-//methode turunan
-
 

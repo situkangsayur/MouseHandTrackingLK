@@ -20,7 +20,6 @@
 #ifndef QCOUNTURWIDGET_H
 #define QCOUNTURWIDGET_H
 
-//#include "qmetatype.h"
 #include <opencv/cv.h>
 #include <QPixmap>
 #include <QLabel>

@@ -26,7 +26,6 @@ ConHistogram::ConHistogram() {
 	histimg = cvCreateImage(cvSize(320, 200), 8, 3);
 	singleFrame = 0;
 
-	//for draw histogram :
 	hist = 0;
 
 	hdims = 50;
@@ -34,14 +33,12 @@ ConHistogram::ConHistogram() {
 	hranges_arr[1] = 255;
 	hranges = hranges_arr;
 	bin_w = 0;
-	//float max_val;
-			i = 0;
+	i = 0;
 
-			hist = cvCreateHist(1, &hdims, CV_HIST_ARRAY, &hranges, 1);
+	hist = cvCreateHist(1, &hdims, CV_HIST_ARRAY, &hranges, 1);
 
-			color = CV_RGB(101,255,0);
-
-		}
+	color = CV_RGB(101,255,0);
+}
 
 ConHistogram::~ConHistogram() {
 
@@ -80,7 +77,7 @@ void ConHistogram::setSingleFrame(IplImage *singleFrame) {
 }
 
 void ConHistogram::progressImage() {
-	//cvShowImage("window", frame);
+
 	if(singleFrame == 0){
 		singleFrame=cvCreateImage(cvGetSize(frame),IPL_DEPTH_8U,1);
 	}
@@ -91,27 +88,22 @@ void ConHistogram::progressImage() {
 }
 
 void ConHistogram::drawHistogram() {
-	//CvHistogram *hist = 0;
-
-	//hist = cvCreateHist( 1, &hdims, CV_HIST_ARRAY, &hranges, 1 );
 
 	cvZero(histimg);
-	//cvCloneMatND()
 	cvCalcHist(&singleFrame, hist, 0, 0);
 	cvGetMinMaxHistValue(hist, 0, &max_val, 0, 0);
 
 	cvConvertScale(hist->bins, hist->bins, max_val ? 255. / max_val : 0., 0);
-	//cvZero(histimg);
+
 	bin_w = histimg->width / hdims;
 
 
 	for (i = 0; i < hdims; i++) {
 		val = (cvGetReal1D(hist->bins, i) * (histimg->height - 5) / 255);
-		//(hsv2rgb(i*180.f/hdims);
+
 		cvRectangle(histimg, cvPoint(i * bin_w, histimg->height),
 				cvPoint((i + 1) * bin_w, (int) (histimg->height - val)), color,
 				1, 8, 0);
-		//cout<<i<<endl;
 	}
 	cout << hdims << endl;
 }

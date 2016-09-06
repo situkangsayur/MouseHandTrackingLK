@@ -60,18 +60,12 @@ public:
 		cvCvtColor(img, currentYCrCbFrame, CV_BGR2YCrCb);
 
 		cvInRangeS(currentYCrCbFrame, min, max, skin);
-		//			/cvXorS( skin, cvScalarAll(255), skin, 0 );
-		//for(int i=0;i<skin->)
 
-
-		//		Size size12(12,6);
 
 		if (rect_12 == 0) {
 			rect_12 = cvCreateStructuringElementEx(12, 12, 6, 6, CV_SHAPE_RECT);
 		}
 		cvErode(skin, skin, rect_12, 1);
-
-		//Size size6(6,3);
 
 		if (rect_6 == 0) {
 			rect_6 = cvCreateStructuringElementEx(6, 6, 3, 3, CV_SHAPE_RECT);

@@ -35,7 +35,7 @@ public:
 
 	CvHistogram *hist;
 
-	int hdims; // ����HIST�ĸ���Խ��Խ��ȷ
+	int hdims;
 	float hranges_arr[2];
 	float* hranges;
 	int bin_w;
@@ -43,8 +43,6 @@ public:
 	int i;
 	double val;
 	CvScalar color;
-
-//	CvMatND *myBins;
 
 public:
 	ConHistogram();

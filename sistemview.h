@@ -19,7 +19,6 @@
  */
 #ifndef SISTEMVIEW_H
 #define SISTEMVIEW_H
-//#include "qmetatype.h"
 
 #include <QWidget>
 #include "inheritsistemview.h"

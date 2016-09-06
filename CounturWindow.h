@@ -16,7 +16,6 @@ class CounturWindow : public QWidget
     private:
         QCounturWidget *widgetCountur;
         CvCapture *camera;
-      //  QPushButton  buttonStart;
 
         IplImage *image;
         int set;
@@ -27,7 +26,6 @@ class CounturWindow : public QWidget
         ~CounturWindow();
 
         void setImage(IplImage *image);
-       // void setQWidget(QWidget *parent);
 
         void setSet(int s);
          

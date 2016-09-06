@@ -34,13 +34,10 @@
 #include <stdlib.h>
 
 #include "IColorSkinDetector.h"
-//#include "CustomYCrCbSkin.h"
 #include "YCrCbSkinDetector.h"
-//#include "HsvSkinDetector.h"
 #include "Image.h"
 
 using namespace std;
-//using namespace cv;
 
 const int MAX_CORNERS = 500;
 

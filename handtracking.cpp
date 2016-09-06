@@ -70,18 +70,14 @@ void HandTracking::trackPoint(Display *dpy) {
         redy = ((p1.y / (480 / 100)) * (890 / 100));
 
 	if (redx < searchx) {
-		//	countx = searchx - redx;
 		redx -= countx;
 		stateX = 0;
 	} else {
-		//	county = redx - searchx;
-		//	redx += countx;
 		stateX = 1;
 	}
 
 	if (redy < searchy) {
 
-		//	county = searchy - redy;
 		redy -= county;
 		stateY = 0;
 
@@ -98,8 +94,6 @@ void HandTracking::trackPoint(Display *dpy) {
 	}
 
 	cout << redx << "&" << redy << countx << endl;
-	//int screenx = (int) ((redx * 11366.0) - 100);
-	//int screeny = (int) ((redy * 1768.0) - 100);
 
 	// move the mouse to the red region's center of gravity
 	XTestFakeMotionEvent(dpy, DefaultScreen (dpy), redx, redy, 0);

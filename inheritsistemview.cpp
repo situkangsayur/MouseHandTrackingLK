@@ -47,7 +47,6 @@ InheritSistemView::InheritSistemView(QWidget *parent) :
      connect(buttonPetunjuk,SIGNAL(clicked()),this,SLOT(on_buttonPetunjuk_clicked()));
 
      histogram = new DialogHistogram();
-     //histogram->exec();
      histogram->hide();
 
      countur = new DialogContour();
@@ -61,7 +60,6 @@ InheritSistemView::InheritSistemView(QWidget *parent) :
 InheritSistemView::~InheritSistemView(){
     tracking->~HandTracking();
     histogram->~DialogHistogram();
-    //cou->~DialogContour();
     delete this;
 }
 
@@ -97,12 +95,9 @@ void InheritSistemView::on_buttonPetunjuk_clicked(){
         controll->showPetunjuk();
 }
 
-//methode turunan
-
-
 void InheritSistemView::onStart(){
     cout<<"onStart "<<endl;
-    //state = 1;
+
     widgetOpenCV->setState(1);
 
 }
@@ -111,12 +106,10 @@ void InheritSistemView::onStop(){
     cout<<"onStop "<<endl;
     widgetOpenCV->setState(0);
     tracking->setDefault();
-    //state = 0;
 }
 
 void InheritSistemView::onHistogram(){
-        cout<<"onHistogram "<<endl;
-      //  histogram->getQwidget()->setima
+    cout<<"onHistogram "<<endl;
     if(histogram->isHidden()){
        widgetOpenCV->setHistogram(1);
        histogram->show();

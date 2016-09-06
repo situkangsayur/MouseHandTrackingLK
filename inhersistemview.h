@@ -21,7 +21,7 @@
 #ifndef INHERSISTEMVIEW_H
 #define INHERSISTEMVIEW_H
 
-class InherSistemView:
+class InherSistemView
 {
 public:
     InherSistemView();

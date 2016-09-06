@@ -20,12 +20,8 @@
 #include "HistogramWindow.h"
 
 HistogramWindow::HistogramWindow(QWidget *parent) : QWidget(parent) {
-    //camera = cam;
     QVBoxLayout *layout = new QVBoxLayout;
     widgetHistogram= new QHistogramWidget(this);
-
-   // contour = new ConContour();
-
 
     layout->addWidget(widgetHistogram);
     setLayout(layout);
@@ -45,25 +41,15 @@ void HistogramWindow::setImage(IplImage *image){
 }
 
 void HistogramWindow::timerEvent(QTimerEvent*) {
-    //IplImage *image=cvQueryFrame(camera);
-if(img != 0){
-    //cvCopy(img,src);
-   if(set==1){
-
-       histogram->setFrame(img);
-       histogram->progressImage();
-
-        widgetHistogram->putImage(histogram->getHistimg());
-
-        std::cout<<"in == 1"<<endl;
-        //widgetHistogram->putImage(img);
+    if(img != 0){
+        if(set==1){
+            histogram->setFrame(img);
+            histogram->progressImage();
+            widgetHistogram->putImage(histogram->getHistimg());
+            std::cout<<"in == 1"<<endl;
    }
 
 }
-
-
-   // image = tracking->getImage();
-
 
 }
 

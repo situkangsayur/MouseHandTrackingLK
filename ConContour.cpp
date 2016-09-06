@@ -40,12 +40,6 @@ IplImage *ConContour::getSkin() {
         return skin;
 }
 
-/*
-CvCapture *ConContour::getGrabber() {
-        return grabber;
-}
-*/
-
 IplImage *ConContour::getCurrentFrame() {
         return currentFrame;
 }

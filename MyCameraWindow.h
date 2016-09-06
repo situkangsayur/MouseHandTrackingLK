@@ -20,8 +20,6 @@
 #ifndef MYCAMERAWINDOW_H_
 #define MYCAMERAWINDOW_H_
 
-//#include "qmetatype.h"
-
 #include <QWidget>
 #include <QVBoxLayout>
 #include <QOpenCVWidget.h>
@@ -31,8 +29,6 @@
 #include "ConContour.h"
 #include "sistemmodel.h"
 #include <stdlib.h>
-
-//#include "handtracking.h"
 
 
 
@@ -47,10 +43,8 @@ class MyCameraWindow : public QWidget
         IplImage *black;
         IplImage *gray;
 
-
-
         ConContour *cont;
-       // HandTracking *tracking;
+
         SistemModel *model;
 
         int state;

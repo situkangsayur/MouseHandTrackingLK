@@ -24,9 +24,6 @@ CounturWindow::CounturWindow(QWidget *parent) : QWidget(parent) {
     QVBoxLayout *layout = new QVBoxLayout;
     widgetCountur= new QCounturWidget(this);
 
-   // contour = new ConContour();
-
-
     layout->addWidget(widgetCountur);
     setLayout(layout);
     resize(640, 480);
@@ -53,15 +50,8 @@ void CounturWindow::timerEvent(QTimerEvent*) {
 
  if(image != 0){
    if(set==1){
-
-   // contour->setCurrentFrame(image);
-   // contour->frameGrabber();
-
-        widgetCountur->putImage(image);
-
-
+       widgetCountur->putImage(image);
    }else{
-  //      image = cvLoadImage("GNU.jpg",3);
        widgetCountur->putImage(image);
    }
  }

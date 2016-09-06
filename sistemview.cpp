@@ -23,20 +23,12 @@
 SIstemView::SIstemView(QWidget *parent) :
     QWidget(parent)
 {
-    /*
-SIstemView::SIstemView(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::SIstemView)
-    */
-
     ui = new InheritSistemView(this);
-    //ui->setupUi(this);
 }
 
 SIstemView::~SIstemView()
 {
    ui->~InheritSistemView();
-  //  delete ui;
 }
 
 
