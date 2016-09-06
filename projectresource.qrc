@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>images/7023332-human-hand-concept-made-of-100-icons-set-in-black-color.jpg</file>
+        <file>images/contour.jpg</file>
+        <file>images/exit.png</file>
+        <file>images/GNU.jpg</file>
+        <file>images/GNU.png</file>
+        <file>images/histogram.jpg</file>
+        <file>images/play.png</file>
+        <file>images/stop.png</file>
+        <file>images/buttonContour.png</file>
+        <file>images/buttonHistogram.png</file>
+        <file>images/button Keluar.png</file>
+        <file>images/buttonStop.png</file>
+        <file>images/tombolStart.png</file>
+        <file>images/running.png</file>
+    </qresource>
+</RCC>
